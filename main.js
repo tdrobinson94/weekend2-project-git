@@ -23,8 +23,18 @@ midPriceItems.forEach(function (title) {
   midPriceHTML.innerHTML += "<p>" + title + "</p>";
 });
 
+var item_GBP = items.filter(function(item){
+  return item.currency_code === "GBP";
+});
 
-// midPriceItems.forEach(function(){
-//   newHTML += midPriceItems;
-// });
-// midPrice.textContent += newHTML;
+var nameOfItem = item_GBP.map(function(description){
+  return description.title;
+});
+
+var priceOfItem = item_GBP.map(function(description){
+  return description.price;
+});
+
+var namePrice = document.getElementById('answer3');
+  namePrice.textContent = nameOfItem +
+  " has a GBP currency code and the price is $" + priceOfItem + ".";
