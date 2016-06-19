@@ -49,6 +49,21 @@ var materialHTML = document.getElementById('answer4');
   materialHTML.innerHTML += "<p>" + title + "</p>";
 });
 
+var moreThanEight = items.filter(function(item) {
+  return item.materials.length >= 8;});
+
+var item_Title =  moreThanEight.map(function(objects){
+  return objects.title});
+
+var newHTML = document.getElementById('answer5');
+
+for(item of moreThanEight){
+  newHTML.innerHTML += "<p>" + item.title + " has " + item.materials.length + " materials." + "</p>";
+for(material of item.materials){
+  newHTML.innerHTML += "<p>" + material + "</p>";
+}
+}
+
 
 var whoMade = items.filter(function(item){
   return item.who_made === "i_did"});
