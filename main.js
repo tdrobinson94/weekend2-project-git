@@ -38,3 +38,22 @@ var priceOfItem = item_GBP.map(function(description){
 var namePrice = document.getElementById('answer3');
   namePrice.textContent = nameOfItem +
   " has a GBP currency code and the price is $" + priceOfItem + ".";
+
+var item_material = items.filter(function(item){
+  return item.materials.includes("wood");
+  }).map(function(objects){
+  return objects.title});
+
+var materialHTML = document.getElementById('answer4');
+  item_material.forEach(function (title) {
+  materialHTML.innerHTML += "<p>" + title + "</p>";
+});
+
+
+var whoMade = items.filter(function(item){
+  return item.who_made === "i_did"});
+
+var madeBySeller = whoMade.length;
+
+var seller = document.getElementById('answer6');
+  seller.textContent = madeBySeller + " items were made by seller.";

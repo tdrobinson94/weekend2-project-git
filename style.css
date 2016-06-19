@@ -38,7 +38,10 @@ h3 {
 
 .answer {
   text-align: center;
-  height: 125px;
+  height: 130px;
+}
+#answer4{
+  height: 145px;
 }
 
 .bottombar{
