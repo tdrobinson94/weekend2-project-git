@@ -1,4 +1,4 @@
-var average_price = items.map(function (item) {
+ var average_price = items.map(function (item) {
   return item.price;
   }).reduce(function(total, current_price){
   return total + current_price})/ items.length;
@@ -51,9 +51,6 @@ var materialHTML = document.getElementById('answer4');
 
 var moreThanEight = items.filter(function(item) {
   return item.materials.length >= 8;});
-
-var item_Title =  moreThanEight.map(function(objects){
-  return objects.title});
 
 var newHTML = document.getElementById('answer5');
 
